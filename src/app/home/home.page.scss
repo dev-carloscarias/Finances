@@ -1,0 +1,43 @@
+ion-fab-button {
+  margin-right: 15%;
+  --background: #e5383b;
+}
+
+ion-label h2{
+  font-weight: bold;
+}
+ion-list{
+  width: 95%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+ion-slide{
+  margin-top: 20%;
+}
+
+ion-button{
+  height: 90px;
+  --background: #30292F;
+}
+
+#icon-button {            
+  position: absolute;
+  top: 2px;
+  border-radius: 100%;
+}
+
+h1 {            
+  position: absolute;
+  top: 35px;
+  border-radius: 100%;
+}
+
+h3 {
+  text-align: center;
+  color: crimson;
+}

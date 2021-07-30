@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Crear Transaccion
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="vertransactions()">Ver Transacciones</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-calendar 
+      [(ngModel)]="date" 
+      (change)="onChange($event)" 
+      [type]="type" 
+      [options]="optionsSingle"
+      [format]="'YYYY-MM-DD'"></ion-calendar>
+  </ion-card>
+</ion-content>

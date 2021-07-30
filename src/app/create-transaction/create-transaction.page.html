@@ -1,0 +1,30 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Ingresar Transaccion</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cancelar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item>
+      <ion-label>Tipo: </ion-label>
+      <ion-input type="number" [(ngModel)]="tipo" text-right id="input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Origen: </ion-label>
+      <ion-input type="text" [(ngModel)]="origen" text-right id="input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cantidad: </ion-label>
+      <ion-input type="number" [(ngModel)]="cantidad" text-right id="input"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Detalle: </ion-label>
+      <ion-input type="text" [(ngModel)]="detalle" text-right id="input"></ion-input>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-button style="--background:#35c518; margin-left: 10%; margin-right: 10%;" expand="block" (click)="saveTransaction()">Crear Transaccion</ion-button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Finanzas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="creartransaction()">Crear Transaccion</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let date of dates">
+      <ion-button (click)="getTransactionbyDate(date)">
+        <ion-icon id="icon-button" name="checkmark-circle"></ion-icon>
+        <h5>{{date.name_day}}</h5>
+        <h1>{{date.numbe_day}}</h1>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+  <ion-list>
+    <div *ngIf="empty" id="empty_entreno">
+      <h3>Hoy no hay transacciones!</h3>
+    </div>
+    <ion-item *ngFor="let transaction of transactions">
+      <ion-label><h3 style="color: black;">{{transaction.source}}</h3></ion-label>
+      <div *ngIf="transaction.tipo==-1" id="empty_entreno">
+        <ion-label><h2 style="color: red;">Q {{transaction.cantidad}}</h2></ion-label>
+      </div>
+      <div *ngIf="transaction.tipo==1" id="empty_entreno">
+        <ion-label><h2 style="color: green;">Q {{transaction.cantidad}}</h2></ion-label>
+      </div>
+      <ion-label><h3 style="color: black;">{{transaction.detalle}}</h3></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
